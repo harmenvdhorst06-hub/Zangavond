@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#17100e">
+    <meta name="description" content="Zoek een lied en zing mee tijdens de Worship Night.">
+    <title>Zangavond · Worship Night</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preload" as="image" href="worship-night-bg.png" fetchpriority="high">
+    <link rel="stylesheet" href="style.css">
+    <script src="liedjes.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="hero-image" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <header class="site-header">
+          <a class="brand" href="#" aria-label="Zangavond, liedjesoverzicht">
+            <span class="brand-mark" aria-hidden="true">♫</span>
+            <span class="brand-name">Zangavond</span>
+          </a>
+          <span class="edition-label"><span class="edition-dot" aria-hidden="true"></span> Liedboek</span>
+        </header>
+
+        <div class="hero-content">
+          <p class="eyebrow">Samen zingen · samen vieren</p>
+          <h1 class="hero-title"><span class="title-block">WORSHIP</span><em>NIGHT!</em></h1>
+          <p class="hero-copy">Vind je lied. Zing mee.</p>
+        </div>
+        <div class="hero-bottom"><span>LIEDJES &amp; TEKSTEN</span><span class="hero-rule" aria-hidden="true"></span><span>SCROLL OM TE ZOEKEN</span></div>
+      </div>
+    </div>
+
+    <main class="app-shell">
+      <section id="song-list-view" class="view list-view" aria-labelledby="page-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Het liedboek</p>
+            <h2 id="page-title">Kies een lied</h2>
+          </div>
+          <span id="song-count" class="song-count" aria-live="polite"></span>
+        </div>
+
+        <label class="search-box" for="song-search">
+          <span class="search-icon" aria-hidden="true"></span>
+          <input id="song-search" type="search" placeholder="Zoek op liednummer of titel" autocomplete="off" spellcheck="false">
+          <span class="search-key" aria-hidden="true">ZOEKEN</span>
+        </label>
+
+        <div id="song-list" class="song-list" aria-live="polite"></div>
+        <p id="empty-state" class="empty-state" hidden></p>
+      </section>
+
+      <section id="song-detail-view" class="view detail-view" aria-labelledby="song-title" hidden>
+        <button id="back-button" class="back-button" type="button">
+          <span class="back-chevron" aria-hidden="true"></span>
+          <span>Alle liedjes</span>
+        </button>
+        <article class="song-sheet">
+          <div class="song-meta"><span id="detail-number" class="detail-number"></span><span class="meta-divider" aria-hidden="true"></span><span>Worship Night</span></div>
+          <h1 id="song-title" class="song-title"></h1>
+          <div class="title-rule" aria-hidden="true"></div>
+          <div id="song-lyrics" class="song-lyrics"></div>
+        </article>
+      </section>
+
+      <footer class="site-footer"><span class="footer-mark" aria-hidden="true">♫</span><span>Een avond. Eén stem. Samen.</span></footer>
+    </main>
+  </body>
+</html>
